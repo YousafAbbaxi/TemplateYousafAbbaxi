@@ -1,0 +1,488 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive Website</title>
+
+  <style type="text/Css">
+   *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   }
+   html{
+    scroll-behavior: smooth;
+   }
+   body{
+    background: #f2f2f2;
+   }
+   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background : #333;
+    z-index: 100;
+
+   }
+   .flex{
+    display: flex;
+    align-items: center;
+   }
+   .navbar{
+
+    justify-content: space-between;
+   }
+   .container{
+
+    width:100% ;
+    max-width: 980px;
+    margin: 0 auto;
+    
+   }
+   .navbar a{
+
+    color: aliceblue;
+    text-decoration: none;
+    padding: 20px 0;
+    display: inline-block;
+   }
+   .navbar-links{
+
+    gap: 20px;
+    list-style: none;
+   }
+   .navbar-links :hover{
+    transition: 0.2s;
+    color: #ddd;
+   }
+  .homepage{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background: url(img/img-3.jpg);
+   background-size:cover;
+   background-position: center;
+  }
+  .homepag::before{
+    background: rgba(0,0, 0, 0.4);
+    left: 0;
+    top: 0;
+    position: relative;
+  }
+  .content{
+    position: relative;
+    flex-direction: column;
+    height: 85%;
+    justify-content: center;
+  }
+  .middle{
+
+    align-items: center;
+    color: #fff;
+  }
+  .middle h1{
+    font-size: 60px;
+    font-weight: 1000px;
+    margin-bottom: 10px;
+  }
+.middle p{
+  font-weight: 700px;
+  
+}
+.content a{
+  color: #333;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+  margin-top: 30px;
+  border: 2px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.4);
+}
+.content a:hover{
+  color:#fff;
+  background: rgba(25%,25%,25%, 0.2);
+}
+ section{
+  padding-top: 80px;
+ }
+ .section-text{
+  text-align: center;
+ }
+ section .card img{
+
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 20px;
+   
+ }
+ section .card{
+  width: calc(100% / 3 - 30px);
+  margin-top: 50px;
+  list-style: none;
+  background-color: #fff;
+  padding: 40px 15px;
+  border-radius: 5px;
+  box-shadow: 0 , 5px , 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px; 
+  
+ }
+ 
+ section .cards p{
+  margin-top: 10px;
+ }
+ section .cards{
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+ }
+ #portfolio .card{
+  padding: 0 0 20px ;
+
+ }
+ #portfolio .card img{
+
+   width: 100%;
+   height: 250px;
+   border-radius: 8px 8px 0 0;
+   margin-top: -0.5px;
+ }
+ .about .companyinfo{
+
+ margin-top: 30px;
+  .about .row{
+    padding: 10px;
+  }
+ }
+ .about h3{
+  margin: 30px 0 10px;
+ }
+ .about ul{
+  padding-left: 20px;
+ }
+
+ .contact .row{
+
+  margin: 60px 0 90px;
+  justify-content: space-between;
+ }
+ .contact .row .col{
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+ }
+ .contact .row .col p{
+
+  color: #7a7a7a;
+  margin-bottom: 15px;
+ }
+ .form input{
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  border: 1px solid #bfbfbf;
+  padding: 0 15px;
+  outline: none;
+ }
+ .form textarea{
+
+  width: 100%;
+  height: 150px;
+  outline: none;
+  resize: none;
+  border: 1px solid #bfbfbf;
+
+ }
+ .col button{
+   padding: 10px;
+   border-radius: 6px;
+  font-size: 17px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  transition: 0.2s;
+  margin-top: 10px;
+  cursor: pointer;
+ }
+ .col button:hover{
+  background-color: #525252;
+ }
+ .footer{
+  background-color: #333;
+  padding: 20px;
+ }
+ footer span{
+  color: #fff;
+ }
+ 
+#menu-toggler{
+  display: none;
+}
+#menu-toggler:checked~.navbar-links{
+  left: 0;
+}
+/*Responsive*/
+@media( width < 860px){
+ .navbar .navbar-links{
+  position: fixed;
+  top: 65px;
+  height: 100%;
+  display: block;
+ background-color: #333;
+  width: 300px;
+  left: 0px;
+  padding-left: 20px;
+  left: -100%;
+  transition: all 0.4s ease;
+}
+.navbar-links li{
+  font-size: 18px;
+  padding-top: 30px;
+}
+#hamburger-btn{
+
+color: #fff;
+font-size: 22px;
+cursor: pointer;
+}
+#menu-toggler{
+  display: none;
+}
+#menu-toggler:checked~.navbar-links{
+  left: 0;
+}
+#menu-toggler i{
+  display: none;
+}
+}
+  </style>
+
+</head>
+<body>
+
+   <!--header start-->
+   <header>
+    <Nav class="navbar container flex">
+
+    <h2 class="logo"><a href="#"> Logo</a> </h2>  
+  <input type="checkbox" id="menu-toggler">
+    <label for="menu-toggler" id="hamburger-btn">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <ul class="navbar-links flex">
+
+      <li> <a href="#Home ">Home</a></li>
+      <li> <a href="#Services">Services</a></li>
+      <li> <a href="#Portfolio">Portfolio</a></li>
+      <li> <a href="#About Us">About Us</a></li>
+      <li> <a href="#Contact Us">Contact Us</a></li>
+
+    </ul>
+    </Nav>
+  </header>
+   <!--header End-->
+
+  <!--Home Page Section start -->
+
+    <section class="homepage" id="Home">
+      <div class="content flex">
+        <div class="text middle">
+
+          <h1>Camging Gear and Essientials</h1>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition thats why!</p>
+        </div>
+        <a href="#Services">Our Services</a>
+      </div>
+    </section>
+
+    <!--Home Page Section End -->
+
+    <!--Services Start-->
+    <section class="services" id="Services">
+
+      <div class="container">
+        <div class="section-text">
+
+          <h2>Our Services</h2>
+        <p> This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p>
+        
+        </div>
+
+          <ul class="cards flex">
+            <li class="card"> <img src="img/img6.jpg" alt="servicesImg">
+            <h3>Tents</h3>
+            <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+          </li>
+          <li class="card"> <img src="img/img6.jpg" alt="servicesImg">
+            <h3>Tents</h3>
+            <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+          </li>
+          <li class="card"> <img src="img/img6.jpg" alt="servicesImg">
+            <h3>Tents</h3>
+            <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+          </li>
+          <li class="card"> <img src="img/img6.jpg" alt="servicesImg">
+            <h3>Tents</h3>
+            <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+          </li>
+          <li class="card"> <img src="img/img6.jpg" alt="servicesImg">
+            <h3>Tents</h3>
+            <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+          </li>
+          <li class="card"> <img src="img/img6.jpg" alt="servicesImg">
+            <h3>Tents</h3>
+            <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+          </li>
+          
+           
+          </ul>
+          
+      </div>
+    </section>
+
+    <!--Services End-->
+
+     <!--Portfolio start-->
+
+     <section class="Portfolio" id="Portfolio">
+
+      <div class="container">
+
+        <div class="section-text">
+
+        <h2>Our Portfolio</h2>
+        <p> This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p>
+         </div>
+         <ul class="cards flex">
+          <li class="card"> <img src="img/img-2.jpg" alt="servicesImg">
+          <h3>Mountain Hicking</h3>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+        </li>
+
+        <li class="card"> <img src="img/img-2.jpg" alt="servicesImg">
+          <h3>Mountain Hicking</h3>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+        </li>
+        <li class="card"> <img src="img/img-2.jpg" alt="servicesImg">
+          <h3>Mountain Hicking</h3>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+        </li>
+        <li class="card"> <img src="img/img-2.jpg" alt="servicesImg">
+          <h3>Mountain Hicking</h3>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+        </li>
+        <li class="card"> <img src="img/img-2.jpg" alt="servicesImg">
+          <h3>Mountain Hicking</h3>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+        </li>
+        <li class="card"> <img src="img/img-2.jpg" alt="servicesImg">
+          <h3>Mountain Hicking</h3>
+          <p>This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p> 
+        </li>
+      </div>
+     </section>
+
+     <!--Portfolio End-->
+
+     <!--About Start-->
+     <section class="about" id="About Us">
+
+      <div class="container" id="container">
+       <div class="section-text">
+        <h2>About Us</h2>
+        <p> This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p>
+      </div>
+      <div class="row companyinfo">
+        <h3>Our Story</h3>
+        <p> This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition! <br> And I know If I try my best I'm able to do many more things.</p>
+     
+        <h3>Our Vision</h3>
+        <p> This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition! <br> And I know If I try my best I'm able to do many more things.</p>
+      </div>
+     <div class="row team">
+      <h3>Our Team</h3>
+      <ul>
+        <li >Yousaf Abbasi - Founder and CEO  </li>
+        <li >Sardar Usman - Front-End Developer </li>
+        <li >Abbas Khan - Back-End Developer  </li>
+        <li >Frank F - Web Designer </li>
+
+      </ul>
+     </div>
+      </div>
+
+
+     </section>
+    <!--About End-->
+
+  <!--Contact start-->
+    <section class="contact " id="Contact Us">
+    <div class="container">
+
+      <div class="section-text">
+
+        <h2>Contact Us</h2>
+        <p> This website is just for test drive I just want to Practise of Html and css And I want to be ready for every condition!</p>
+
+
+      </div>
+      
+     <divc class="row flex">
+      <div class="col information">
+
+        <div class="contact-detail">
+
+
+          <p><i class="fas fa-map-marker-alt"></i>12 street lahore pakistan</p>
+          <p><i class="fas fa-envelope"></i>informationhub@outlook.com</p>
+          <p><i class="fas fa-phone"></i>+1(234)322452</p>
+          <p><i class="fas fa-clock"></i>Monday - Friday 09:00 Am - 3:00 Pm</p>
+          <p><i class="fas fa-clock"></i>Saturday 10:00 Am - 3:00 Pm</p>
+          <p><i class="fas fa-clock"></i>Sunday : Closed</p>
+          <p><i class="fas fa-globe"></i>www.mycodingschool.org</p>
+
+
+
+        </div>
+      </div>
+      <div class="col form">
+
+        <form action="#">
+
+          <input type="text" placeholder="Name*" required>
+          <input type="text" placeholder="Email*" required>
+          <textarea  placeholder="  Message*" required></textarea>
+          <button id="submite" type="submit">Message me</button>
+        </form>
+      </div>
+     </div>
+    </div>
+
+    </section>
+    <!--Contact start-->
+
+  <!--Footer Start-->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <span>Copyright @ 2024 All Rights Reserved Home Contacts</span>
+    </div>
+  </footer>
+
+    <!--Footer End-->
+
+
+
+
+
+</body>
+
+</html>
